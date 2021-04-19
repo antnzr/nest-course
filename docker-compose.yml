@@ -1,8 +1,8 @@
 version: '3.0'
 
-service:
+services:
   main:
-    container_name: postgres
+    container_name: main
     build:
       context: .
     env_file:
@@ -15,7 +15,7 @@ service:
       - 9229:9229
     command: npm run start:dev
     depends_on:
-      - postgers
+      - postgres
     restart: always
 
   postgres:

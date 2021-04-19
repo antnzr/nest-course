@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm i
+RUN npm install
 
 COPY . .
 
 COPY ./dist ./dist
 
-CMD ['npm', 'run', 'start:dev']
+CMD ["npm", "run", "start:dev"]
